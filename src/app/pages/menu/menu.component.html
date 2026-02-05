@@ -1,0 +1,122 @@
+<div class="container mt-5">
+    <div class="d-flex align-items-center gap-3 mb-4">
+        <div class="bg-primary bg-opacity-10 text-primary p-3 rounded-circle">
+            <i class="bi bi-menu-button-wide-fill fs-3"></i>
+        </div>
+        <h2 class="fw-bold m-0">Menú de Navegación</h2>
+    </div>
+
+    <!-- Analogía -->
+    <div class="card mb-5 border-0 shadow-sm rounded-4" style="background: var(--bg-card);">
+        <div class="card-body p-4">
+            <h4 class="card-title fw-bold text-gradient mb-3">
+                <i class="bi bi-compass-fill me-2"></i>
+                Analogía: El Menú de un Restaurante
+            </h4>
+            <p class="text-muted">Sin un menú, no sabes qué puedes pedir. En una web es igual:</p>
+            <ul class="list-group list-group-flush bg-transparent">
+                <li class="list-group-item bg-transparent border-secondary border-opacity-10 d-flex gap-2">
+                    <i class="bi bi-check2 text-success"></i>
+                    <span><strong>Claridad:</strong> Nombres cortos y descriptivos.</span>
+                </li>
+                <li class="list-group-item bg-transparent border-secondary border-opacity-10 d-flex gap-2">
+                    <i class="bi bi-check2 text-success"></i>
+                    <span><strong>Jerarquía:</strong> Platos fuertes vs Postres.</span>
+                </li>
+                <li class="list-group-item bg-transparent border-0 d-flex gap-2">
+                    <i class="bi bi-check2 text-success"></i>
+                    <span><strong>Disponibilidad:</strong> Siempre a la mano.</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Controles del Demo -->
+    <div class="p-3 bg-dark-subtle rounded-4 mb-4 d-inline-flex gap-2 border border-secondary border-opacity-25">
+        <button class="btn btn-sm rounded-pill px-3" [class.btn-primary]="menuType === 'horizontal'"
+            [class.btn-outline-secondary]="menuType !== 'horizontal'" (click)="setMenuType('horizontal')">
+            <i class="bi bi-dash-lg me-1"></i> Horizontal
+        </button>
+        <button class="btn btn-sm rounded-pill px-3" [class.btn-primary]="menuType === 'vertical'"
+            [class.btn-outline-secondary]="menuType !== 'vertical'" (click)="setMenuType('vertical')">
+            <i class="bi bi-list me-1"></i> Vertical
+        </button>
+        <button class="btn btn-sm rounded-pill px-3" [class.btn-primary]="menuType === 'sidebar'"
+            [class.btn-outline-secondary]="menuType !== 'sidebar'" (click)="setMenuType('sidebar')">
+            <i class="bi bi-layout-sidebar me-1"></i> Sidebar
+        </button>
+    </div>
+
+    <!-- Demo Visual -->
+    <div class="mockup-frame p-5 d-flex justify-content-center align-items-center rounded-4 border border-secondary border-opacity-25 shadow-lg position-relative overflow-hidden"
+        style="background-color: var(--bg-dark);">
+        <div class="position-absolute top-0 start-0 w-100 h-100 opacity-50"
+            style="background-image: radial-gradient(var(--text-muted) 1px, transparent 1px); background-size: 20px 20px;">
+        </div>
+
+        <!-- MENU HORIZONTAL -->
+        <nav *ngIf="menuType === 'horizontal'" class="demo-nav horizontal shadow-lg z-1"
+            style="background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 50px; padding: 1rem;">
+            <div class="logo fw-bold d-flex align-items-center gap-2" style="color: var(--text-main);"><i
+                    class="bi bi-hexagon-fill text-primary"></i> LOGO</div>
+            <ul class="d-flex gap-3 m-0 p-0 list-unstyled">
+                <li><a href="#" class="text-decoration-none opacity-75 hover-opacity-100"
+                        style="color: var(--text-main);" (click)="$event.preventDefault()">Inicio</a></li>
+                <li><a href="#" class="text-decoration-none opacity-75 hover-opacity-100"
+                        style="color: var(--text-main);" (click)="$event.preventDefault()">Productos</a></li>
+                <li><a href="#" class="text-decoration-none opacity-75 hover-opacity-100"
+                        style="color: var(--text-main);" (click)="$event.preventDefault()">Nosotros</a></li>
+            </ul>
+        </nav>
+
+        <!-- MENU VERTICAL -->
+        <nav *ngIf="menuType === 'vertical'" class="demo-nav vertical shadow-lg z-1"
+            style="background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 1rem;">
+            <div class="logo fw-bold mb-4 d-flex align-items-center gap-2" style="color: var(--text-main);"><i
+                    class="bi bi-hexagon-fill text-primary"></i> LOGO</div>
+            <ul class="d-flex flex-column gap-2 m-0 p-0 list-unstyled">
+                <li>
+                    <a href="#" class="d-block p-2 rounded-2 text-decoration-none"
+                        style="background-color: var(--primary); color: white;" (click)="$event.preventDefault()">
+                        <i class="bi bi-house me-2"></i> Inicio
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="d-block p-2 rounded-2 text-decoration-none hover-bg-opacity"
+                        style="color: var(--text-muted);" (click)="$event.preventDefault()">
+                        <i class="bi bi-box-seam me-2"></i> Productos
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="d-block p-2 rounded-2 text-decoration-none hover-bg-opacity"
+                        style="color: var(--text-muted);" (click)="$event.preventDefault()">
+                        <i class="bi bi-people me-2"></i> Nosotros
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- SIDEBAR -->
+        <div *ngIf="menuType === 'sidebar'" class="d-flex w-100 h-100 z-1 rounded-3 overflow-hidden"
+            style="min-height: 250px; background-color: var(--bg-card); border: 1px solid var(--border-color);">
+            <nav class="demo-nav sidebar h-100 p-3"
+                style="background-color: var(--bg-card-hover); border-right: 1px solid var(--border-color);">
+                <div class="logo fw-bold mb-4 d-flex align-items-center gap-2" style="color: var(--text-main);"><i
+                        class="bi bi-hexagon-fill"></i></div>
+                <ul class="d-flex flex-column gap-3 m-0 p-0 list-unstyled text-center">
+                    <li><a href="#" class="fs-4" style="color: var(--primary);" (click)="$event.preventDefault()"><i
+                                class="bi bi-house"></i></a></li>
+                    <li><a href="#" class="fs-4 opacity-50" style="color: var(--text-muted);"
+                            (click)="$event.preventDefault()"><i class="bi bi-bag"></i></a></li>
+                    <li><a href="#" class="fs-4 opacity-50" style="color: var(--text-muted);"
+                            (click)="$event.preventDefault()"><i class="bi bi-gear"></i></a></li>
+                </ul>
+            </nav>
+            <div class="flex-grow-1 p-4">
+                <div class="h-100 w-100 rounded-3" style="background-color: var(--bg-dark);"></div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

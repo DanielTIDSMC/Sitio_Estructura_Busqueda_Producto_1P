@@ -1,0 +1,18 @@
+/* Estilos específicos para Inicio */
+.card-hover {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s var(--ease-out), border-color 0.3s var(--ease-out);
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+    background-color: var(--bg-card-hover);
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

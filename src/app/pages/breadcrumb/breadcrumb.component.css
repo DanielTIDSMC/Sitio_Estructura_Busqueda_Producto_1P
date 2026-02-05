@@ -1,0 +1,31 @@
+/* Estilos específicos de la página de demostración */
+.demo-breadcrumb-container {
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    color: var(--text-muted);
+}
+
+.breadcrumb-item a {
+    color: var(--primary);
+    transition: color 0.2s;
+}
+
+.breadcrumb-item a:hover {
+    color: var(--secondary);
+    text-decoration: underline !important;
+}
+
+/* Fix for list-group-items visibility in dark/light modes */
+.list-group-item {
+    color: var(--text-main);
+}
+
+.icon-circle {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

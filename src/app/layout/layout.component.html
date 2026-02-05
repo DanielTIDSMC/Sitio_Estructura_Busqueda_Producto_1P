@@ -1,0 +1,44 @@
+<header class="topbar">
+  <div class="brand"><i class="bi bi-rocket-takeoff-fill text-primary"></i> Sitio-Estructura</div>
+
+  <nav class="menu" [class.active]="isMenuOpen()">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+      (click)="closeMenu()">Inicio</a>
+    <a routerLink="/breadcrumbs" routerLinkActive="active" (click)="closeMenu()">Breadcrumbs</a>
+    <a routerLink="/elementos" routerLinkActive="active" (click)="closeMenu()">Elementos</a>
+    <a routerLink="/menu" routerLinkActive="active" (click)="closeMenu()">Menú</a>
+    <a routerLink="/mapas-sitio" routerLinkActive="active" (click)="closeMenu()">Mapa del Sitio</a>
+    <a routerLink="/busqueda" routerLinkActive="active" (click)="closeMenu()">Búsqueda</a>
+  </nav>
+  <form class="d-flex ms-3" (submit)="$event.preventDefault(); goSearch()">
+    <input class="form-control form-control-sm me-2" placeholder="Buscar…" [(ngModel)]="quickQuery" name="quickQuery" />
+    <button class="btn btn-sm btn-primary" type="submit">Ir</button>
+  </form>
+
+  <button
+    class="btn btn-sm btn-outline-secondary ms-3 rounded-circle d-flex align-items-center justify-content-center p-2"
+    style="width: 38px; height: 38px;" (click)="toggleTheme()" aria-label="Toggle theme">
+    <i class="bi fs-5" [class.bi-moon-stars-fill]="isDarkMode()" [class.bi-sun-fill]="!isDarkMode()"
+      [class.text-warning]="!isDarkMode()" [class.text-light]="isDarkMode()"></i>
+  </button>
+
+  <!-- Botón Hamburguesa (Solo visible en móvil) -->
+  <button
+    class="btn btn-outline-secondary d-lg-none d-flex align-items-center justify-content-center p-2 ms-2 hamburger-btn"
+    (click)="toggleMenu()" aria-label="Toggle menu">
+    <i class="bi" [class.bi-list]="!isMenuOpen()" [class.bi-x-lg]="isMenuOpen()"></i>
+  </button>
+</header>
+
+<!-- Contenido principal. -->
+<main class="content">
+  <!-- <router-outlet>: Aquí es donde Angular muestra la página actual.
+       Analogía: Es el escenario del teatro. El marco (header/footer) es fijo, pero en este hueco cambia la obra (la página). -->
+  <app-breadcrumb></app-breadcrumb>
+  <router-outlet></router-outlet>
+</main>
+
+<!-- Pie de página. También fijo. -->
+<footer class="footer">
+  <small>Desarrollo Web Profesional</small>
+</footer>

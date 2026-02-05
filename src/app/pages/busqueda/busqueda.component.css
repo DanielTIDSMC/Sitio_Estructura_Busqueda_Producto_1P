@@ -1,0 +1,116 @@
+/* Espaciado y color de títulos */
+.mb-3 {
+  margin-bottom: 1rem;
+  color: var(--text-main);
+  /* Dynamic text color */
+  font-weight: 600;
+}
+
+/* Tarjetas */
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: transparent;
+  /* Let card-body handle bg or set here */
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Contenido de la tarjeta */
+.card-body {
+  background-color: var(--bg-card);
+  /* Dynamic background */
+  color: var(--text-main);
+  /* Dynamic text */
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 100%;
+  margin: auto;
+}
+
+/* Inputs */
+.form-control {
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-dark);
+  /* Dark input in dark mode */
+  color: var(--text-main);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.2rem var(--primary-glow);
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+}
+
+/* Botones */
+.btn {
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border: none;
+  color: white;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-outline-secondary {
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--bg-card-hover);
+  color: var(--text-main);
+}
+
+/* Selects */
+.form-select {
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  transition: border-color 0.2s ease;
+}
+
+.form-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.2rem var(--primary-glow);
+}
+
+/* Resultados */
+.list-group-item {
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-card);
+  color: var(--text-main);
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.list-group-item:hover {
+  background-color: var(--bg-card-hover);
+  transform: translateX(4px);
+  color: var(--text-main);
+}
+
+/* Badge */
+.badge {
+  border-radius: 6px;
+  font-size: 0.75rem;
+  padding: 0.4em 0.6em;
+}

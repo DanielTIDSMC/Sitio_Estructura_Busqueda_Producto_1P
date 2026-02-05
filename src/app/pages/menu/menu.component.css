@@ -1,0 +1,63 @@
+/* Estilos Demo Menú */
+.mockup-frame {
+    min-height: 300px;
+}
+
+.demo-nav {
+    background: transparent;
+    /* Allow inline style/theme to control this */
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.demo-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+.demo-nav a {
+    color: var(--text-muted);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.demo-nav a:hover {
+    background: var(--primary-glow);
+    color: var(--primary);
+}
+
+/* Variantes */
+.demo-nav.horizontal {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.demo-nav.vertical {
+    width: 200px;
+}
+
+.demo-nav.vertical ul {
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.demo-nav.sidebar {
+    width: 150px;
+    border-radius: 8px 0 0 8px;
+}
+
+.demo-nav.sidebar ul {
+    flex-direction: column;
+}
+
+.logo {
+    font-weight: 800;
+    color: white;
+}

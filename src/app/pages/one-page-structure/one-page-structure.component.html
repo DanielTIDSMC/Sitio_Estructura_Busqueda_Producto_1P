@@ -1,0 +1,171 @@
+<div class="one-page-container">
+    <!-- HEADER / TOPBAR -->
+    <header class="section-container header-section">
+        <div class="content-wrapper">
+            <h1 class="section-title">Header / Topbar</h1>
+            <p class="section-desc">
+                La barra de navegación superior (Header o Topbar) es el elemento que encabeza la página.
+                Su función principal es ofrecer identidad (branding) y navegación global.
+            </p>
+
+            <div class="component-breakdown">
+                <h3>Componentes:</h3>
+                <ul>
+                    <li><strong>Logo:</strong> Identidad visual de la marca o sitio.</li>
+                    <li><strong>Menú de Navegación:</strong> Enlaces a las secciones principales.</li>
+                    <li><strong>Buscador:</strong> Herramienta para encontrar contenido rápido.</li>
+                    <li><strong>Acciones de Usuario:</strong> Login, carrito de compras, notificaciones.</li>
+                </ul>
+            </div>
+
+            <div class="visual-example header-example">
+                <div class="mock-logo">MiSitio</div>
+                <div class="mock-nav">
+                    <span>Inicio</span>
+                    <span>Servicios</span>
+                    <span>Contacto</span>
+                </div>
+                <div class="mock-user">👤</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- BREADCRUMBS -->
+    <section class="section-container breadcrumbs-section">
+        <div class="content-wrapper">
+            <h2 class="section-title">Breadcrumbs (Migas de Pan)</h2>
+            <p class="section-desc">
+                Muestran la ruta de navegación que ha seguido el usuario para llegar a la página actual.
+                Mejoran la orientación y permiten volver rápidamente a niveles superiores.
+            </p>
+
+            <div class="component-breakdown">
+                <h3>Para qué sirven:</h3>
+                <ul>
+                    <li>Ubican al usuario en la jerarquía del sitio.</li>
+                    <li>Reducen la tasa de rebote al facilitar la navegación.</li>
+                </ul>
+            </div>
+
+            <div class="visual-example breadcrumb-example">
+                <span>Inicio</span> <span class="separator">></span>
+                <span>Categoría</span> <span class="separator">></span>
+                <span class="active">Página Actual</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- NAVIGATION MENU -->
+    <section class="section-container nav-section">
+        <div class="content-wrapper">
+            <h2 class="section-title">Menú de Navegación</h2>
+            <p class="section-desc">
+                Es el mapa de ruta del sitio web. Permite a los usuarios acceder a las diferentes secciones
+                de manera estructurada. Puede estar en el header, en un sidebar o ser desplegable.
+            </p>
+
+            <div class="visual-example nav-example">
+                <div class="nav-item active">Inicio</div>
+                <div class="nav-item">Acerca de</div>
+                <div class="nav-item">Servicios</div>
+                <div class="nav-item">Blog</div>
+                <div class="nav-item">Contacto</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <section class="section-container main-section">
+        <div class="content-wrapper">
+            <h2 class="section-title">Contenido Principal (Main Content)</h2>
+            <p class="section-desc">
+                Es el área más importante de la página, donde reside la información única que el usuario vino a buscar.
+                Debe estar libre de distracciones y bien estructurado.
+            </p>
+
+            <div class="component-breakdown">
+                <h3>Elementos Comunes:</h3>
+                <ul>
+                    <li><strong>Títulos (H1, H2):</strong> Jerarquizan la información.</li>
+                    <li><strong>Párrafos:</strong> Texto explicativo.</li>
+                    <li><strong>Imágenes/Media:</strong> Apoyo visual al contenido.</li>
+                    <li><strong>Artículos/Post:</strong> El cuerpo del mensaje.</li>
+                </ul>
+            </div>
+
+            <div class="visual-example main-example">
+                <div class="mock-article">
+                    <div class="mock-h1">Título del Artículo</div>
+                    <div class="mock-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</div>
+                    <div class="mock-img">Imagen Destacada</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UI COMPONENTS -->
+    <section class="section-container ui-section">
+        <div class="content-wrapper">
+            <h2 class="section-title">Componentes UI</h2>
+            <p class="section-desc">
+                Elementos interactivos y visuales que facilitan la interacción del usuario con la interfaz.
+            </p>
+
+            <div class="ui-grid">
+                <div class="ui-card">
+                    <h3>Botones</h3>
+                    <p>Permiten realizar acciones (Enviar, Comprar).</p>
+                    <button class="btn-demo">Acción Primaria</button>
+                </div>
+                <div class="ui-card">
+                    <h3>Tarjetas (Cards)</h3>
+                    <p>Agrupan información relacionada en un contenedor.</p>
+                    <div class="card-demo">
+                        <div class="card-img"></div>
+                        <div class="card-txt">Título Card</div>
+                    </div>
+                </div>
+                <div class="ui-card">
+                    <h3>Íconos</h3>
+                    <p>Representaciones gráficas de acciones o conceptos.</p>
+                    <div class="icons-demo">
+                        <span>🏠</span> <span>🔍</span> <span>⚙️</span>
+                    </div>
+                </div>
+                <div class="ui-card">
+                    <h3>Enlaces</h3>
+                    <p>Conectan páginas o recursos entre sí.</p>
+                    <a href="#" class="link-demo" (click)="$event.preventDefault()">Ver más detalles</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="section-container footer-section">
+        <div class="content-wrapper">
+            <h2 class="section-title">Footer (Pie de Página)</h2>
+            <p class="section-desc">
+                Cierra la página y ofrece información de referencia que el usuario espera encontrar al final.
+            </p>
+
+            <div class="component-breakdown">
+                <h3>Qué incluye:</h3>
+                <ul>
+                    <li><strong>Copyright:</strong> Derechos de autor.</li>
+                    <li><strong>Enlaces Legales:</strong> Privacidad, Términos y Condiciones.</li>
+                    <li><strong>Mapa del Sitio:</strong> Enlaces a todas las secciones.</li>
+                    <li><strong>Redes Sociales:</strong> Conexión externa.</li>
+                    <li><strong>Contacto:</strong> Dirección, email, teléfono.</li>
+                </ul>
+            </div>
+
+
+            <div class="visual-example footer-layout">
+                <div class="col">© 2026 SitioEstructura</div>
+                <div class="col">Privacidad | Términos</div>
+                <div class="col">Facebook | Twitter | Instagram</div>
+            </div>
+        </div>
+    </footer>
+</div>

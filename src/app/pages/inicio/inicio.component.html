@@ -1,0 +1,65 @@
+<div class="container mt-5">
+
+    <!-- Header de la Sección -->
+    <div class="text-center mb-5 fade-in">
+        <h1 class="display-4 fw-bold text-gradient mb-3">Bienvenido a la Estructura Web</h1>
+        <p class="lead text-muted mx-auto" style="max-width: 600px;">
+            Explora cómo funciona un sitio web por dentro a través de ejemplos interactivos y analogías sencillas.
+        </p>
+    </div>
+
+    <!-- Analogía Principal -->
+    <div class="card mb-5 border-0 shadow-lg rounded-4 overflow-hidden" style="background: var(--bg-card);">
+        <div class="card-body p-4 p-md-5">
+            <div class="d-flex align-items-start gap-4">
+                <div class="icon-box text-primary bg-primary-subtle rounded-circle p-3 d-flex align-items-center justify-content-center"
+                    style="width: 64px; height: 64px;">
+                    <i class="bi bi-building-check fs-2"></i>
+                </div>
+                <div>
+                    <h3 class="card-title fw-bold mb-3">Analogía: La Recepción del Hotel (Lobby)</h3>
+                    <p class="card-text text-muted mb-3">
+                        Imagina que este sitio web es un edificio. La página de <strong>Inicio</strong> es el Lobby.
+                    </p>
+                    <ul class="list-unstyled d-grid gap-2 text-muted">
+                        <li class="d-flex align-items-center gap-2">
+                            <i class="bi bi-check-circle-fill text-success"></i>
+                            <strong>Primera Impresión:</strong> Aquí decides si el lugar se ve profesional y confiable.
+                        </li>
+                        <li class="d-flex align-items-center gap-2">
+                            <i class="bi bi-check-circle-fill text-success"></i>
+                            <strong>Orientación:</strong> No te quedas a vivir en el lobby, pasas por aquí para
+                            preguntar "¿Dónde está la piscina?".
+                        </li>
+                        <li class="d-flex align-items-center gap-2">
+                            <i class="bi bi-check-circle-fill text-success"></i>
+                            <strong>Distribución:</strong> Tiene puertas y pasillos (Enlaces) a todas las áreas
+                            importantes.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navegación Rápida -->
+    <h3 class="mb-4 fw-bold ps-2 border-start border-4 border-primary">Explora las Áreas</h3>
+    <div class="row g-4 pb-5">
+        <div class="col-md-4 col-sm-6" *ngFor="let item of quickLinks">
+            <div class="card h-100 card-hover border-0 shadow-sm rounded-4" style="cursor: pointer;"
+                [routerLink]="item.path">
+                <div class="card-body text-center p-4">
+                    <div class="icon-box-sm bg-dark-subtle text-primary rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center"
+                        style="width: 50px; height: 50px;">
+                        <i [class]="item.icon" class="fs-4"></i>
+                    </div>
+                    <h5 class="card-title fw-bold mb-2">{{ item.title }}</h5>
+                    <p class="card-text text-muted small mb-3">{{ item.desc }}</p>
+                    <button class="btn btn-sm btn-outline-primary rounded-pill px-4 stretched-link">Ir a
+                        Sección</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

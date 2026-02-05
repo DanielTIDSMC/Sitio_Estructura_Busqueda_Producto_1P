@@ -1,0 +1,102 @@
+<div class="container mt-5">
+    <div class="d-flex align-items-center gap-3 mb-4">
+        <div class="bg-primary bg-opacity-10 text-primary p-3 rounded-circle">
+            <i class="bi bi-diagram-3-fill fs-3"></i>
+        </div>
+        <h2 class="fw-bold m-0">Mapa del Sitio (Sitemap)</h2>
+    </div>
+
+    <!-- Analogía -->
+    <div class="card mb-5 border-0 shadow-sm rounded-4" style="background: var(--bg-card);">
+        <div class="card-body p-4">
+            <h4 class="card-title fw-bold text-gradient mb-3">
+                <i class="bi bi-map-fill me-2"></i>
+                Analogía: El Plano del Edificio
+            </h4>
+            <p class="text-muted">Igual que el plano de evacuación pegado en la puerta:</p>
+            <ul class="list-group list-group-flush bg-transparent">
+                <li class="list-group-item bg-transparent border-secondary border-opacity-10 d-flex gap-2">
+                    <i class="bi bi-person-fill text-info"></i>
+                    <span><strong>Para Humanos:</strong> Te permite ver todas las secciones de un vistazo.</span>
+                </li>
+                <li class="list-group-item bg-transparent border-0 d-flex gap-2">
+                    <i class="bi bi-robot text-success"></i>
+                    <span><strong>Para Robots (Google):</strong> Les da una lista de URLs para indexar.</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Visualización de Árbol -->
+    <div
+        class="tree-container p-5 bg-dark rounded-4 border border-secondary border-opacity-25 overflow-auto shadow-inner custom-scrollbar">
+        <h6 class="text-center text-secondary text-uppercase mb-5 ls-2 fw-bold opacity-75">Estructura Jerárquica Visual
+        </h6>
+
+        <div class="tree-root d-flex flex-column align-items-center">
+            <div
+                class="node-card root-node shadow-lg rounded-pill px-4 py-2 border-0 bg-primary text-white fw-bold d-flex align-items-center gap-2">
+                <i class="bi bi-house-fill"></i> Inicio
+            </div>
+            <div class="vertical-line"></div>
+
+            <div class="children-container d-flex justify-content-center gap-5">
+
+                <!-- Rama Elementos -->
+                <div class="branch d-flex flex-column align-items-center">
+                    <div class="vertical-line-sm"></div>
+                    <div
+                        class="node-card shadow-sm rounded-3 bg-dark-subtle text-light border border-secondary border-opacity-50 px-3 py-2 d-flex align-items-center gap-2">
+                        <i class="bi bi-grid-1x2"></i> Elementos
+                    </div>
+                </div>
+
+                <!-- Rama Navegación -->
+                <div class="branch d-flex flex-column align-items-center">
+                    <div class="vertical-line-sm"></div>
+                    <div
+                        class="node-card shadow-sm rounded-3 bg-dark-subtle text-light border border-secondary border-opacity-50 px-3 py-2 d-flex align-items-center gap-2">
+                        <i class="bi bi-compass"></i> Navegación
+                    </div>
+                    <div class="vertical-line"></div>
+                    <div
+                        class="children-group d-flex justify-content-center gap-3 border-top border-secondary border-opacity-25 pt-3 position-relative">
+                        <div class="d-flex flex-column align-items-center">
+                            <div class="vertical-line-xs position-absolute top-0 start-25" style="left: 25%"></div>
+                            <!-- Fake line logic simplified for visual -->
+                            <div
+                                class="node-card sm rounded-pill bg-black border border-secondary border-opacity-50 px-2 py-1 text-muted small">
+                                Menú</div>
+                        </div>
+                        <div class="d-flex flex-column align-items-center">
+                            <div class="vertical-line-xs position-absolute top-0 start-75" style="left: 75%"></div>
+                            <div
+                                class="node-card sm rounded-pill bg-black border border-secondary border-opacity-50 px-2 py-1 text-muted small">
+                                Breadcrumbs</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rama Mapa -->
+                <div class="branch d-flex flex-column align-items-center">
+                    <div class="vertical-line-sm"></div>
+                    <div
+                        class="node-card shadow-sm rounded-3 bg-dark-subtle text-light border border-secondary border-opacity-50 px-3 py-2 d-flex align-items-center gap-2">
+                        <i class="bi bi-diagram-3"></i> Mapas
+                    </div>
+                </div>
+
+                <!-- Rama Búsqueda -->
+                <div class="branch d-flex flex-column align-items-center">
+                    <div class="vertical-line-sm"></div>
+                    <div
+                        class="node-card shadow-sm rounded-3 bg-dark-subtle text-light border border-secondary border-opacity-50 px-3 py-2 d-flex align-items-center gap-2">
+                        <i class="bi bi-search"></i> Búsqueda
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

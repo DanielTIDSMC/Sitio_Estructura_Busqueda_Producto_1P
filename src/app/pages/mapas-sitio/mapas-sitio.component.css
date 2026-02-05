@@ -1,0 +1,48 @@
+/* Estilos Árbol */
+.tree-container {
+    min-height: 400px;
+}
+
+.node-card {
+    background: var(--bg-card-hover);
+    border: 1px solid var(--primary);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    color: var(--text-main);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.node-card.root-node {
+    background: var(--primary);
+    color: white;
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+.node-card.sm {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+    border-color: var(--secondary);
+}
+
+.vertical-line {
+    width: 2px;
+    height: 30px;
+    background-color: var(--text-muted);
+    opacity: 0.5;
+}
+
+.vertical-line-sm {
+    width: 2px;
+    height: 20px;
+    background-color: var(--text-muted);
+    opacity: 0.5;
+}
+
+/* Conectores horizontales (simplificado visualmente) */
+.children-container {
+    position: relative;
+    padding-top: 10px;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+}

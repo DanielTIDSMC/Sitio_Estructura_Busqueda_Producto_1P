@@ -1,0 +1,53 @@
+.mockup-container {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #000;
+}
+
+.mock-part {
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mock-header {
+    height: 70px;
+    background-color: var(--secondary);
+    color: white;
+}
+
+.mock-main {
+    min-height: 350px;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mock-footer {
+    height: 100px;
+    background-color: #111116;
+}
+
+.mock-btn {
+    width: 40px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.mock-box {
+    width: 100%;
+    height: 80px;
+}
+
+/* Estados Interactivos */
+.active-part {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(1);
+}
+
+.inactive-part {
+    opacity: 0.3;
+    filter: grayscale(100%) blur(2px);
+    transform: scale(0.98);
+}

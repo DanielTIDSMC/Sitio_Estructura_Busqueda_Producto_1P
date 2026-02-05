@@ -1,1 +1,143 @@
-/* You can add global styles to this file, and also import other style files */
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;600;700&display=swap');
+
+:root {
+    /* Default Dark Mode */
+    --bg-dark: #0a0a0c;
+    --bg-card: #141419;
+    --bg-card-hover: #1c1c24;
+
+    --primary: #6366f1;
+    --primary-glow: rgba(99, 102, 241, 0.4);
+    --secondary: #8b5cf6;
+    --accent: #f43f5e;
+
+    --text-main: #ffffff;
+    --text-muted: #cbd5e1;
+    --text-dim: #94a3b8;
+
+    --border-color: rgba(255, 255, 255, 0.08);
+    --glass-bg: rgba(20, 20, 25, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 6rem;
+
+    /* Typography */
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Animation */
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Light Mode Theme */
+body.light-mode {
+    --bg-dark: #f8fafc;
+    --bg-card: #ffffff;
+    --bg-card-hover: #f1f5f9;
+
+    --primary: #4f46e5;
+    --primary-glow: rgba(79, 70, 229, 0.2);
+    --secondary: #7c3aed;
+    --accent: #e11d48;
+
+    --text-main: #0f172a;
+    --text-muted: #475569;
+    --text-dim: #64748b;
+
+    --border-color: rgba(0, 0, 0, 0.08);
+    --glass-bg: rgba(255, 255, 255, 0.8);
+    --glass-border: rgba(0, 0, 0, 0.05);
+}
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    color: var(--text-main);
+    line-height: 1.2;
+    margin-bottom: var(--spacing-sm);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Utilities */
+.text-gradient {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+
+/* Bootstrap Override for Dark Mode */
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+.text-white-50 {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.card-title {
+    color: var(--text-main);
+}
+
+.lead {
+    color: var(--text-muted);
+}
+
+/* Fix for list-group-items to adapt to theme changes */
+.list-group-item,
+.list-group-item span,
+.list-group-item strong,
+.list-group-item i {
+    color: var(--text-main) !important;
+    background-color: transparent !important;
+}
+
+/* Explicit override for dark mode to be absolutely sure */
+body:not(.light-mode) .list-group-item,
+body:not(.light-mode) .list-group-item span,
+body:not(.light-mode) .list-group-item strong {
+    color: #ffffff !important;
+}
